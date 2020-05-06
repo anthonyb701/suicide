@@ -8,9 +8,12 @@ let j = 0;
 let remain;
 let checkword;
 let checktry;
-console.log(word);  // Слово 
+let startgame;
 
 ///////////////////// Вирахування масиву з _ //////////
+
+let game = function(z = 1, k = 0, j = 0){
+   console.log(word);  // Слово
 
 for (let i = 0; i < word.length; i++){
    answerArray[i] = '_';
@@ -79,7 +82,18 @@ if(guess === null){
 } else if(z > 5) {
    alert('Вы проиграли');
    console.log('Game lost');
+   startgame = confirm('Попробовать еще?')
+   if(startgame){
+      game();
+   }
 } else {
    alert(`Отлично! Было загадано слово [ ${word} ]`);
    console.log('Winner');
+   startgame = confirm('Сыграть еще?')
+   if(startgame){
+      game();
+   }
 }
+}
+
+game();
