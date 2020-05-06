@@ -25,7 +25,7 @@ while (remainingLetters >  0){
    if(j = 6){
       j = 0;
    }
-   guess = prompt('Угадайте букву, или нажмите отмена для выхода изи игры.');
+   guess = prompt('Угадайте букву, или нажмите отмена для выхода из игры.');
    if (guess === null){
       break;
    } else if (guess.length !== 1){
